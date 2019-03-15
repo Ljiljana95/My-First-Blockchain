@@ -1,0 +1,34 @@
+
+TRADER 1
+{
+  "$class": "org.acme.mynetwork.Trader",
+  "tradeId": "TRADER1",
+  "firstName": "Jenny",
+  "lastName": "Jones"
+}
+
+TRADER 2
+{
+  "$class": "org.acme.mynetwork.Trader",
+  "tradeId": "TRADER2",
+  "firstName": "Amy",
+  "lastName": "Williams"
+}
+
+ASSET
+{
+  "$class": "org.acme.mynetwork.Commodity",
+  "tradingSymbol": "ABC",
+  "description": "Test commodity",
+  "mainExchange": "Euronext",
+  "quantity": 72.297,
+  "owner": "resource:org.acme.mynetwork.Trader#TRADER1"
+}
+
+TRANSAKCIJA
+
+{
+  "$class": "org.acme.mynetwork.Trade",
+  "commodity": "resource:org.acme.mynetwork.Commodity#ABC",
+  "newOwner": "resource:org.acme.mynetwork.Trader#TRADER2"
+}
